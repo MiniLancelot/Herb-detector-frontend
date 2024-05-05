@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Herb Identifier</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    /> -->
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="assets/logo.png" type="image/" />
+  </head>
+
+  <body>
+    <div>
+      <h1 class="title-herb">Herb Identifier</h1>
+    </div>
+    
+
+    <div id="webcam-container">
+      <video id="webcam" autoplay style="border-radius:30px ;"></video>
+    </div>
+
+    <button id="capture-btn">Capture</button>
+    <canvas id="canvas" style="display: none"></canvas>
+
+    <form id="upload-form" class="p-3 text-center" method="post">
+      <input
+        class="form-control"
+        id="file-input"
+        type="file"
+        name="imagefile"
+        accept="image/*"
+      />
+    </form>
+
+    <div id="container">
+      <img src="" id="image-herb" />
+      <ul id="plant-list"></ul>
+    </div>
+  </body>
+</html>
