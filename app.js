@@ -26,7 +26,8 @@ async function processFile(file) {
   }
   const formData = new FormData();
   formData.append("image", file);
-  const response = await postData("http://127.0.0.1:3000/detect", formData);
+  // const response = await postData("http://127.0.0.1:5000/detect", formData);
+  const response = await postData("https://cloud-detect.onrender.com/detect", formData);
   console.log(response.plant_detected);
   imageOutput.src = "data:image/jpeg;base64," + response.plant_detected.image;
 
